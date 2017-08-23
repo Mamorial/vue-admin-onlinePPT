@@ -1,0 +1,186 @@
+// @import "../src/fonts/font.css";//Nnv为父级，不能这里引入
+@import "./color.less";
+@nav-li-count:14;
+@nav-li-color:#2a2f33;
+@nav-li-hover:#23262b;
+@font-white:#fff;
+@font-ccc:#ccc;
+@font-red:#d02e45;
+.nav-color-active {
+  color: @font-red;
+}
+.navigate {
+  // position: fixed;
+  float: left;
+  width: 230px;
+  height: 100%;
+  margin-left: -100%;
+  position: relative;
+  left: -230px;
+  overflow: auto;
+  overflow-x: hidden;
+  background-color: @nav-li-color;
+  z-index: 2;
+  header {
+    color:@body-color;
+    background-color: @nav-li-hover;
+    padding: 5px 5px 15px 60px;
+    height: 30px;
+    .nav-header-left,.nav-header-right {
+      float: left;
+      width: 50%;
+    }
+    .nav-header-left {
+      div {
+        line-height: 20px;
+      }
+      div:last-child {
+        font-size: 0.8rem;
+      }
+    }
+    .nav-header-right {
+      text-align: center;
+      div {
+        cursor: pointer;
+        line-height: 30px;
+        position: relative;
+        top:5px;
+        width: 55px;
+        height: 30px;
+        margin: auto;
+        background-color: #ee243e;
+        border-radius: 5px;
+      }
+    }
+  }
+  *:focus {
+    outline: none;
+  }
+  .nav-bg-active {
+    background-color: @nav-li-hover;
+  }
+  .nav-color-active {
+    color: @font-red;
+  }
+  ul > li {
+    line-height: 40px;
+    a {
+      text-indent: 50px;
+      color:@body-color;
+    }
+    a:hover {
+      background-color: @nav-li-hover;
+      color:@font-red;
+    }
+    i.iconfont {
+      position: absolute;
+      right: 30px;
+
+    }
+    .icon-xiajianhao:after {
+      content: "\e67e";
+      margin-left: 20px;
+    }
+    .secondNav {
+      display: none;
+      li {
+        line-height: 2rem;
+        font-size: 0.8rem;
+        a {
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+}
+.common-top-nav {
+  position: fixed;
+  left: 230px;
+  right: 0px;
+  top:0px;
+  height: 50px;
+  line-height: 50px;
+  background-color: @nav-li-color;
+  color:@font-white;
+  *:focus {
+    outline: none;
+  }
+  .top-nav-left {
+    span {
+      display: inline-block;
+      margin-left: 20px;
+      cursor: pointer;
+      font-size: .9rem
+    }
+  }
+  .top-nav-right {
+    float: right;
+    margin-top: -35px;
+    margin-right: 20px;
+    width: 100px;
+    background-color:  @nav-li-color;
+    border: 0;
+    color:@font-white;
+  }
+  .logo-nav {
+    float: right;
+    width: 150px;
+    height: 50px;
+    margin-top: -50px;
+    img {
+      position: relative;
+      top:5px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+.common-thumb {
+  position: relative;
+  z-index: 1;
+  height: 30px;
+  line-height: 30px;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  *:focus {
+    outline: none;
+  }
+  ul > li {
+    float: left;
+    margin-left: 10px;
+    span {
+      display: inline-block;
+      margin-left: 10px;
+    }
+    &:last-child {
+      span {
+        display: none;
+      }
+    }
+  }
+}
+.common-content {
+  position: fixed;
+  left: 230px;
+  right: 0px;
+  top:50px;
+  bottom: 0px;
+  background-color: #f7f7f7;
+}
+.common-line {
+  text-align: center;
+  position: absolute;
+  left: 0;right: 0;
+  top:0;
+  z-index: -1;
+  select {
+    width: 150px;
+    height: 30px;
+    margin-top: 5px;
+  }
+}
+
+
+
+
+//

@@ -1,0 +1,759 @@
+@import "./color.less";
+@import "./public.less";
+#app{
+  width: 100%;
+  height: 100%;
+}
+#layout {
+  height: 100%;//只能设置高度，不能设置宽度为100%
+  padding: 0 0 0 230px;
+  overflow: hidden;
+}
+.rightContent {
+  height: 100%;
+  width: 100%;
+  float: left;
+  overflow: auto;
+}
+.fullHeightWight {
+  width: 100%;
+  height: 100%;
+  min-height: 550px;
+}
+.fullHeight {
+  height: 100%;
+  & > div {
+    height: 100%;
+  }
+}
+.displayLineBlock {
+  display: inline-block;
+}
+.well {
+  .borderRadius;
+  // width: 100%;
+  cursor: pointer;
+  border: 1px solid @border-light-color;
+  padding: 0 15px;
+  min-height: 35px;
+  line-height: 35px;
+  &:hover {
+    border: 1px solid @border-color;
+  }
+}
+.well.active {
+  border: 1px solid @border-color;
+}
+.flex {
+  display: -webkit-flex;
+  display: flex;
+  // display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+}
+.flexCenter {
+  .flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardbox {
+  min-height: 80%;
+  position: relative;
+  top:50px;
+  margin-bottom: 50px;
+  overflow: auto;
+}
+.fixedCardHeight {
+  height:80%;
+}
+.el-dialog__header {
+  text-align: center;
+}
+i {
+  cursor: pointer;
+}
+.uploadPic {
+  height: 178px;
+  line-height: 178px !important;
+}
+.RadioLabel {
+  position: relative;
+  top:-7px;
+}
+/*******修改分页样式---start*********/
+//#d02e45
+.el-pagination {
+  .el-pager li{
+    margin: auto 5px;
+    border: 0;
+    border: 1px solid @border-light-color;
+    &.active + li{
+      border: 1px solid @border-light-color;
+    }
+  }
+}
+.el-pager li,.el-pagination .btn-next, .el-pagination .btn-prev {
+  padding: 0 10px;
+  min-width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid @border-light-color;
+}
+.el-pager li.btn-quicknext, .el-pager li.btn-quickprev {
+  line-height: 35px;
+}
+
+/*******修改分页样式---end*********/
+.hoverPointer {
+  .el-table__body-wrapper tr {
+    cursor: pointer;
+  }
+}
+.searchInput .el-icon-search {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color:#bfcbd9;
+    line-height: 35px;
+    margin-left: 7px;
+  }
+  /****上传图片*****/
+.avatar-uploader .el-upload {
+    border: 1px dashed #d9d9d9;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .avatar-uploader .el-upload:hover {
+    border-color: #20a0ff;
+  }
+  .avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 178px;
+    height: 178px;
+    line-height: 178px;
+    text-align: center;
+  }
+  .avatar {
+    width: 178px;
+    height: 178px;
+    display: block;
+  }
+  #editor {
+    height: 300px;
+  }
+  /****上传图片*****/
+.jiaoAnManage {
+  height: 100%;
+  .cardbox {
+    .el-select {
+      width: 100%
+    }
+    .classType {
+      height: 40px;
+      margin-bottom: 15px;
+      div {
+        .textCenter;
+        height: 40px;
+        line-height: 40px;
+        color: @white-color;
+        background-color: @gray-color;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    ul.el-row {
+      .spaceBottom;
+      .textRight {
+        line-height: 35px;
+        position: relative;
+        right: 10px;
+      }
+      .textCenter,.textLeft {
+        .textRight;
+      }
+    }
+    .cardImgParent {
+      margin-left: 3.5%;
+    }
+    .cardImg {
+      position: relative;
+      width: 180px;
+      text-align: center;
+      margin:10px;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid @border-color;
+        i {
+          display: block;
+        }
+      }
+      &.active {
+        background-color: @uptoline-color;
+      }
+      i {
+        position: absolute;
+        font-size: .5rem;
+        right: 5px;
+        display: none;
+      }
+    }
+    .cardImg .el-card__body {
+      padding:10px 5px;
+    }
+    .cardImg .image {
+      margin: 10px auto;
+      width: 100%;
+      height: 150px;
+      display: block;
+    }
+    .classWeek  {
+      text-align: center;
+      & > li {
+        a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          &.active {
+            background-color: @blue-color !important;
+            color:@body-color;
+          }
+          &.yellowActive {
+            background-color: @yellow-color;
+            color:@body-color;
+          }
+        }
+        .borderRadius;
+        display: inline-block;
+        width: 4%;
+        margin-left: 0.7%;
+        height: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        cursor: pointer;
+        border:1px solid @border-color;
+        margin-top: 10px;
+      }
+    }
+
+  }
+  .cardbox .classType div.active {
+    background-color: @blue-color;
+  }
+}
+.calendarMoudle {
+  .calendarMoudleContent > ul {
+    margin-top: 25px;
+    min-height: 400px;
+    padding: 50px;
+    text-align: center;
+    &:first-child {
+      // border-right: 1px solid @border-color;
+    }
+    table {
+      width: 100%;
+      tr td,tr th {
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+    .tableList {
+      margin-bottom: 50px;
+      min-height: 250px;
+      .tableListItem {
+        position: relative;
+        cursor: pointer;
+        &:hover,&.active {
+          background-color: @gray-color;
+        }
+      }
+      .saveBtn {
+        position: absolute;
+        right: 60px;
+        margin-top:5px;
+      }
+      input {
+        text-align: center;
+        width: 100px;
+        height: 25px;
+        border: 0;
+      }
+      .right {
+        td:first-child {
+          position: relative;
+          top:5px;
+        }
+        td:last-child {
+          position: relative;
+          top:10px;
+        }
+      }
+      tr th,tr td {
+        width: 33.33%
+      }
+      img {
+        width: 20px;
+      }
+      .rightTopImg {
+        position: relative;
+        width: 15px;
+        left: -13px;
+        top:-23px;
+      }
+    }
+  }
+}
+
+.addReceiver {
+  .teams {
+    min-height: 250px;
+    border: 1px solid @border-light-color;
+    padding: 10px;
+  }
+  .selectedTeams {
+    span{
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 10px;
+      &:after {
+        content:'、'
+      }
+    }
+  }
+}
+.customeServiceMessage {
+  .cardbox {
+    height: 500px;
+    overflow: auto;
+  }
+  ul.el-row {
+    line-height: 30px;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
+.message {
+  .well {
+    line-height: 30px;
+  }
+  .time {
+    color:@gray-color;
+    font-size: .8rem;
+  }
+}
+/**resourceLists**/
+.resourceLists {
+  height: 80px;
+  line-height: 75px;
+  border-bottom: 1px solid @border-light-color;
+  & >li {
+    height: 90%;
+  }
+  img {
+    width: 80%;
+    height: 100%;
+  }
+  .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  small {
+    color:@gray-color;
+  }
+  .operate {
+    text-align: right;
+  }
+}
+/*setting*/
+.setting {
+  .parentContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .container {
+    width: 90%;
+    height: 75%;
+    // background-color: red;
+    margin-left: 5%;
+    margin-top: 5%;
+    overflow: auto;
+  }
+  .settingFooter {
+    // background-color: blue;
+    width: 90%;
+    margin-left: 5%;
+    height: 15%;
+    position: relative;
+    .productLineDescription {
+      & li {
+        margin-bottom: 5px;
+      }
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    .selfPagination {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    .editButton {
+      position: absolute;
+      bottom: 2px;
+      right: 0;
+      width: 100%;
+    }
+  }
+  .table {
+    text-align: center;
+    width: 100%;
+    tr th,tr td {
+      height: 35px;
+      line-height: 35px;
+    }
+  }
+  .productLineTable {
+  thead tr.th{
+    background-color: #eeeeee ;
+  }
+  tbody tr:nth-child(even)  {
+    background-color: #eeeeee ;
+  }
+  tbody tr:nth-child(odd)  {
+    background-color: #e4e4e4 ;
+  }
+  tbody tr.schoolTr {
+    &:hover {
+      background-color: @blue-color;
+      color:@white-color;
+    }
+  }
+  tbody tr.active {
+    color:@white-color;
+    background-color: @blue-color !important;
+  }
+  thead tr th,tbody tr td{
+    border-top:0;
+    border-bottom:0;
+    border-left:0 !important;
+  }
+  tr td,tr th {
+    border-right: 1px solid @white-color !important;
+    cursor: pointer;
+  }
+  img {
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+}
+/**uploadVideo**/
+.uploadVideo {
+  i {
+    cursor: pointer;
+  }
+  .avatar {
+    border:1px dashed #ebebeb;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -198px;
+    &:hover {
+      border:1px dashed #20A0FF;
+    }
+    &.active {
+      border:1px dashed #000;
+    }
+  }
+  .imageLabel {
+    position:relative;
+    top:-175px;
+    left: 160px;
+    z-index: 2;
+    font-size: .5rem;
+  }
+  .imageLabelPlay {
+    position:relative;
+    width: 180px;
+    height: 180px;
+    background-color: rgba(127, 140, 141,.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    // display: none;
+    i {
+      position:relative;
+      color:rgba(127, 140, 141,.8);;
+      font-size: 2rem;
+    }
+  }
+  .avatarImg {
+    width: 180px;
+    height: 180px;
+  }
+  .imageLabelHover {
+    .avatar {
+      margin-top: -18px;
+    }
+    .imageLabel {
+      top:5px;
+    }
+    .imageLabelPlay {
+      display: none;
+    }
+  }
+}
+.qiniuUpload {
+  position:relative;
+  width: 180px;
+  height: 180px;
+  // background-color: rgba(127, 140, 141,.3);
+  border: 1px dashed #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+/*infoEdit*/
+.infoEdit {
+  .honerClass {
+    &.btn {
+      border-radius: 0px;
+      position: relative;
+    }
+    i {
+      font-size: .5rem;
+      position: absolute;
+      top:2px;
+      right: 2px;
+    }
+  }
+}
+/*setting*/
+/*SchoolEdit*/
+.schoolEdit {
+  .grayLabelFont {
+    font-size: 12px;
+    color: @gray-color;
+    position: relative;
+    top:2px;
+  }
+  .authoritySection {
+    margin-top: 20px;
+  }
+  .table {
+    .th td:not(:last-child){
+      border-right: 1px solid @border-color;
+    }
+    tr td,tr th {
+      text-align: center;
+      height: 25px;
+      width:25%;
+    }
+    tr {
+      cursor: pointer;
+      &.active {
+        color:@white-color;
+        background-color: @blue-color;
+      }
+      &:hover:not(.th) {
+        color:@white-color;
+        background-color: @blue-color;
+      }
+    }
+  }
+}
+
+/*Admin*/
+.inventoryModal {
+  display: none;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(149, 165, 166,.5);
+  z-index: 998;
+  .modalContent {
+    position:fixed;
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 70%;
+    height: 80%;
+    min-height: 400px;
+    min-width: 900px;
+    z-index: 1000;
+    background-color: @white-color;
+    // border-radius: 10px;
+    margin-top: 5%;
+    box-shadow: 0px 0px 10px #888888;
+    position: relative;
+    .inventoryModalTitle {
+      li {
+        float: left;
+        height: 45px;
+        line-height: 45px;
+        border-bottom: 1px solid #888;
+        width: 17%;
+        text-align: center;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &:nth-child(3) {
+          width: 32%;
+        }
+      }
+    }
+    .inventoryModalFooter {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      height: 45px;
+      line-height: 45px;
+      text-align: right;
+      border-top: 1px solid #888;
+    }
+    .inventoryModalContent {
+      position: absolute;
+      top:45px;
+      left: 0;
+      right: 0;
+      bottom: 45px;
+      overflow: auto;
+      padding: 10px;
+      .inventoryModalContentSend {
+        text-align: right;
+        select {
+          width: 125px;
+          height: 25px;
+        }
+        input{
+          height: 25px;
+          width: 220px;
+          border-radius: 5px;
+        }
+      }
+      li ul li {
+        float: left;
+        width: 20%;
+      }
+      li ul li:last-child {
+        width: 60%;
+        text-align: right;
+      }
+      .table {
+        td {
+          width: 50px;
+        }
+        margin: 15px auto;
+        .td {
+          background-color: @white-color;
+        }
+        .th td{
+          border:0;
+        }
+        tbody tr td{
+          border:0;
+        }
+        td.rowspan {
+          // background-color: red;
+          vertical-align: top;
+        }
+        // .norowspan td:first-child {
+        //   border-left:0;
+        // }
+      }
+      .tableTrHover, table tr:hover,table thead tr {
+        background-color: #fff;
+      }
+      hr {
+        opacity: 0.5;
+        margin: 10px auto;
+      }
+    }
+  }
+}
+
+.inventoryModal.productLineModal .modalContent {
+  width: 700px;
+  height: 350px;
+  min-width: 700px;
+  top:50px;
+  bottom:100px;
+  .addProxyTemp.addProxyTempAdd li {
+    margin-top: 25px;
+  }
+}
+.proxyModalTitle {
+  float: left;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #888;
+  width: 100%;
+  text-align: center;
+  select {
+    width: 150px;
+    height: 25px;
+  }
+}
+.inventoryModalContent.addProxyTemp > li {
+  margin-top: 10px;
+  // &:first-child {
+  //   margin-top: 5%;
+  // }
+}
+.inventoryModalContent .addProxyTempLeft, {
+  float: left;
+  width: 45%;
+  text-align: right;
+  line-height: 30px;
+}
+.inventoryModalContent .addProxyTempRight {
+  float: left;
+  width: 55%;
+  input {
+    width: 200px;
+    height: 30px;
+  }
+  textarea {
+    width: 200px;
+  }
+  select {
+    width: 204px;
+    height: 34px;
+  }
+}
+/*topicEdit*/
+.topicEdit {
+  .comments {
+    padding:5px 20px;
+    border: 1px solid @border-light-color;
+    line-height: 20px;
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    &:hover,&.active {
+      border: 1px solid @black-color;
+    }
+    .el-icon-close {
+      color:@red-color;
+      font-size: 12px;
+      position: absolute;
+      top:8px;
+      right: 5px;
+    }
+  }
+}

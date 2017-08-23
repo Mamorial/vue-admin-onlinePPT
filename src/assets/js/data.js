@@ -1,0 +1,155 @@
+var navigation = [{
+    "id": 4,
+    "name": "PPT模板",
+    "url": "pptModal/modal",
+    "leaf": true,
+    "isSel": false,
+    "children": []
+}, {
+    "id": 5,
+    "name": "教学资源管理",
+    "leaf": false,
+    "isSel": false,
+    "children": [{
+        "id": 182,
+        "name": "视频上传",
+        "url": "teaching-res-manage/video-list",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }, {
+        "id": 183,
+        "name": "文章上传",
+        "url": "teaching-res-manage/article-list",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }]
+}, {
+    "id": 6,
+    "name": "教练管理",
+    "leaf": false,
+    "isSel": false,
+    "children": [{
+        "id": 184,
+        "name": "教练信息",
+        "url": "coach-manage/info",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }, {
+        "id": 185,
+        "name": "教练订单",
+        "url": "coach-manage/order",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }]
+}, {
+    "id": 7,
+    "name": "日历模块管理",
+	"url": "calendar-moudle-manage/list",
+    "leaf": false,
+    "isSel": false,
+    "children": []
+}, {
+    "id": 8,
+    "name": "教研平台管理",
+    "leaf": false,
+    "isSel": false,
+    "children": [{
+        "id": 186,
+        "name": "话题管理",
+        "url": "teaching-platform/topic",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }, {
+        "id": 187,
+        "name": "新建板块",
+        "url": "teaching-platform/add",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }]
+}, {
+    "id": 9,
+    "name": "用户信息",
+	"url": "userInfo/info",
+    "leaf": false,
+    "isSel": false,
+    "children": []
+}, {
+    "id": 10,
+    "name": "发送通知",
+    "leaf": false,
+    "isSel": false,
+    "children": [{
+        "id": 188,
+        "name": "新建通知",
+        "url": "send-message/add",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }, {
+        "id": 189,
+        "name": "历史通知",
+        "url": "send-message/history",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }]
+}, {
+    "id": 11,
+    "name": "客服消息",
+    "leaf": false,
+    "isSel": false,
+    "children": [{
+        "id": 190,
+        "name": "Q&A管理",
+        "url": "custome-service-message/list",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }, {
+        "id": 191,
+        "name": "客服消息管理",
+        "url": "custome-service-message/message",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }]
+}, {
+    "id": 12,
+    "name": "设置",
+    "leaf": false,
+    "isSel": false,
+    "children": [{
+        "id": 192,
+        "name": "管理员账号",
+        "url": "setting/admin",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }, {
+        "id": 193,
+        "name": "学校账号",
+        "url": "setting/school",
+        "leaf": true,
+        "isShow": true,
+        "isSelect": false,
+        "children": []
+    }]
+}];
+export default navigation;

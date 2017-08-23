@@ -1,0 +1,239 @@
+@import "../fonts/font.css";
+@import "./color.less";
+html,body {
+  width: 100%;
+  height: 100%;
+  min-width: 1200px;
+  // min-height: 500px;
+  background-color: @body-color;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB",Arial,sans-serif;
+}
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+*:focus {
+  outline:0px solid @border-color;
+  // border: 1px solid @border-color;
+}
+a {
+  color:inherit;
+}
+a.active {
+  color:@blue-color;
+}
+u {
+  opacity: 0;
+}
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.navigate a {
+  display: inline-block;text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+}
+.displayInline {
+  display: inline;
+}
+.borderRadius(@basic-radius: 5px) {
+  border-radius: @basic-radius;
+  -webkit-border-radius: @basic-radius;
+  -moz-border-radius: @basic-radius;
+  -ms-border-radius: @basic-radius;
+  -o-border-radius: @basic-radius;
+}
+.fontSize(@font-size: 1rem) {
+  font-size: @font-size;
+}
+.spaceTop(@space:15px) {
+  margin-top: @space;
+}
+.spaceFixedTop {
+  position: relative;
+  top:15px;
+  margin-bottom: 15px;
+}
+.spaceBottom(@space:15px) {
+  margin-bottom: @space;
+}
+.green {
+  background-color: @green-color;
+}
+.green:hover {
+  background-color: @green-color-hover;
+}
+.blue {
+  background-color: @blue-color;
+}
+.blue:hover {
+  background-color: @blue-color-hover;
+}
+.yellow {
+  background-color: @yellow-color;
+}
+.yellow:hover {
+  background-color: @yellow-color-hover;
+}
+.red {
+  background-color: @red-color;
+}
+.red:hover {
+  background-color: @red-color-hover;
+}
+.gray {
+  background-color: @gray-color;
+}
+.gray:hover {
+  background-color: @gray-color-hover;
+}
+.floatLeft {
+  float: left;
+}
+.floatRight {
+  float: right;
+}
+.displayNone {
+  display: none;
+}
+.opcaity0 {
+  opacity: 0;
+}
+.clear {
+  clear:both
+}
+// 全局按钮
+  .btn {
+    display: inline-block;
+    min-width: 70px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 7px;
+    text-align: center;
+    padding:0 5px;
+    color:@white-color;
+    cursor: pointer;
+    margin: auto 5px;
+  }
+  .smallBtn {
+    min-width: 70px;
+    // width: 60px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.9rem;
+    margin: auto 5px;
+    padding: auto 5px;
+  }
+  .plainBtn {
+    .btn;
+    border-radius: 0px;
+    border: 1px solid @border-color;
+    background-color: @white-color;
+    color:@black-color;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    i{
+      position: absolute;
+      font-size: 10px;
+      right:0px;
+      top:0px;
+    }
+    &:hover {
+      background-color: @body-color;
+    }
+  }
+  .plainBtn.active {
+    color:@white-color;
+    background-color: @blue-color;
+  }
+/*加载loading层*/
+#loading {
+  margin: 0;
+  padding: 0;
+  // width: 100%;
+  // height: 100%;
+  position: relative;
+}
+#loading .loading {
+  position: fixed;
+  top:0;left: 0;right: 0;bottom: 0;
+  background-color:rgba(236, 240, 241,.5);
+  box-sizing:border-box;
+  text-align:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  z-index: 999;
+}
+#loading .loader-inner > div {
+  background-color: #000;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(149, 165, 166,.5);
+  z-index: 9999;
+  .modalContent {
+    position:fixed;
+    margin:auto;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    width: 300px;
+    height: 220px;
+    z-index: 1000;
+    padding:10px;
+    background-color: @white-color;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 10%;
+    .flexCenter;
+    .verticalMiddle {
+      .btn {
+        min-width: 70px;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+/*美化滚动条*/
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: @scrollbar-thumb-hover;
+    // border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: @scrollbar-thumb-hover;
+}
+// 字体选择颜色
+::selection {
+    background:@red-color;
+    color:@white-color;
+}
+::-moz-selection {
+    background:@red-color;
+    color:@white-color;
+}
+::-webkit-selection {
+    background:@red-color;
+    color:@white-color;
+}
